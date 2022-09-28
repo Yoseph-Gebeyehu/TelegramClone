@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telegram_app_clone/Screen/telegram_drawer.dart';
 
 class TelegramMain extends StatefulWidget {
   const TelegramMain({Key? key}) : super(key: key);
@@ -13,7 +14,11 @@ class _TelegramMainState extends State<TelegramMain> {
     return DefaultTabController(
       length: 6,
       child: Scaffold(
-        drawer: const Drawer(),
+        drawer: Drawer(
+          elevation: 10,
+          width: MediaQuery.of(context).size.width * 0.75,
+          child: const TelegramDrawer(),
+        ),
         body: NestedScrollView(
           headerSliverBuilder: ((context, innerBoxIsScrolled) => [
                 SliverAppBar(
