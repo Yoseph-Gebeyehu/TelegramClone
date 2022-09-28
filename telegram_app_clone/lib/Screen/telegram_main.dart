@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:telegram_app_clone/Screen/telegram_drawer.dart';
+import 'package:provider/provider.dart';
 
+import '../Model/telegramProvider.dart';
+import '../Widgets/searching.dart';
 import '../Widgets/types_of_groups.dart';
+import 'editng_screen.dart';
+import 'telegram_drawer.dart';
 
 class TelegramMain extends StatefulWidget {
   const TelegramMain({Key? key}) : super(key: key);
@@ -13,6 +17,8 @@ class TelegramMain extends StatefulWidget {
 class _TelegramMainState extends State<TelegramMain> {
   @override
   Widget build(BuildContext context) {
+    final people = Provider.of<TelegramProvider>(context);
+
     return DefaultTabController(
       length: 6,
       child: Scaffold(
@@ -28,11 +34,14 @@ class _TelegramMainState extends State<TelegramMain> {
                   backgroundColor: Colors.blue,
                   actions: [
                     IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.search,
-                      ),
-                    )
+                      onPressed: () {
+                        showSearch(
+                          context: context,
+                          delegate: Search(people),
+                        );
+                      },
+                      icon: const Icon(Icons.search),
+                    ),
                   ],
                   title: const Text('Telegram'),
                   floating: true,
@@ -77,6 +86,14 @@ class _TelegramMainState extends State<TelegramMain> {
               const Tab(child: Text('asdfafa')),
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.edit),
+          onPressed: () {
+            Navigator.of(context).pushNamed(
+              EditingScreen.routeName,
+            );
+          },
         ),
       ),
     );

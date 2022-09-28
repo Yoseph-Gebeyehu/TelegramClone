@@ -63,14 +63,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - Assets/albert-dera-ILip77SbmOE-unsplash.jpg 
-   - Assets/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg 
-   - Assets/freestocks-8a95EVm0ovQ-unsplash.jpg 
-   - Assets/michael-dam-mEZ3PoFGs_k-unsplash.jpg 
-   - Assets/milad-shams-FttBXHp7VZw-unsplash.jpg 
-   - Assets/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg 
-   - Assets/rowan-kyle-m663zRzRe40-unsplash.jpg
-   - Assets/taylor-hernandez-DLKR_x3T_7s-unsplash.jpg
+   - Assets/Images/albert-dera-ILip77SbmOE-unsplash.jpg 
+   - Assets/Images/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg 
+   - Assets/Images/freestocks-8a95EVm0ovQ-unsplash.jpg 
+   - Assets/Images/michael-dam-mEZ3PoFGs_k-unsplash.jpg 
+   - Assets/Images/milad-shams-FttBXHp7VZw-unsplash.jpg 
+   - Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg 
+   - Assets/Images/rowan-kyle-m663zRzRe40-unsplash.jpg
+   - Assets/Images/taylor-hernandez-DLKR_x3T_7s-unsplash.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../Model/telegramProvider.dart';
+import '../Screen/telegramBody.dart';
 
 class TypesOfGroups extends StatelessWidget {
   // const TypesOfGroups({Key key}) : super(key: key);
@@ -13,12 +14,16 @@ class TypesOfGroups extends StatelessWidget {
             children: [
               ListTile(
                 minVerticalPadding: 0,
-                onTap: () {},
-                contentPadding:
-                  const  EdgeInsets.only(left: 10, top: 0, right: 0, bottom: 0),
+                onTap: () {
+                  if(people[index].name == 'Tariku Birhan'){
+                    Navigator.of(context).pushNamed(TelegramBody.routeName);
+                  } 
+                },
+                contentPadding: const EdgeInsets.only(
+                    left: 10, top: 0, right: 0, bottom: 0),
                 title: Text(
                   people[index].name,
-                  style:const TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
                 leading: CircleAvatar(
                   radius: 30,

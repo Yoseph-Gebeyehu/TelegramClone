@@ -95,7 +95,7 @@ class Search extends SearchDelegate<String> {
               children: [
                 TextSpan(
                   text: remainingText,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 17,
                     color: Colors.grey,
                   ),

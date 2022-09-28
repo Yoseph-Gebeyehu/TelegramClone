@@ -27,7 +27,7 @@ class TelegramDrawer extends StatelessWidget {
                         CircleAvatar(
                           radius: 30,
                           backgroundImage: AssetImage(
-                            'Assets/milad-shams-FttBXHp7VZw-unsplash.jpg',
+                            'Assets/Images/rowan-kyle-m663zRzRe40-unsplash.jpg',
                           ),
                         ),
                         Icon(
