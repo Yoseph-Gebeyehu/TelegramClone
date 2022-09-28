@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:telegram_app_clone/Screen/telegram_drawer.dart';
 
+import '../Widgets/types_of_groups.dart';
+
 class TelegramMain extends StatefulWidget {
   const TelegramMain({Key? key}) : super(key: key);
 
@@ -62,14 +64,17 @@ class _TelegramMainState extends State<TelegramMain> {
                   ),
                 ),
               ]),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
-              Tab(child: Text('All')),
-              Tab(child: Text('Private')),
-              Tab(child: Text('Groups')),
-              Tab(child: Text('Channels')),
-              Tab(child: Text('Bot')),
-              Tab(child: Text('Personal')),
+              Tab(
+                height: 1000,
+                child: TypesOfGroups(),
+              ),
+              Tab(child: Text('asdfafa')),
+              Tab(child: Text('asdfafa')),
+              Tab(child: Text('asdfafa')),
+              Tab(child: Text('asdfafa')),
+              Tab(child: Text('asdfafa')),
             ],
           ),
         ),
