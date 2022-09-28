@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:telegram_app_clone/Model/telegram.dart';
 
 class TelegramProvider with ChangeNotifier {
-  List<TelegramModel> _userList = [
+  final List<TelegramModel> _userList = [
     TelegramModel(
       name: 'Tariku Birhan',
       imageName: 'Assets/IMG_20210130_174525.jpg',
