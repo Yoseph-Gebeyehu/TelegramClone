@@ -10,10 +10,11 @@ class TelegramBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final peopleId = ModalRoute.of(context)!.settings.arguments as String;
     final peopleList = Provider.of<TelegramProvider>(context).userList;
     final peopleName = peopleList
         .where(
-          (element) => element.name == 'Tariku brhan',
+          (element) => element.name == 'Tariku Birhan',
         )
         .toList;
     return Scaffold(
@@ -59,15 +60,14 @@ class TelegramBody extends StatelessWidget {
             const CircleAvatar(
               radius: 20,
               backgroundImage: ExactAssetImage(
-                'Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg',
-              ),
+                  'Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg'),
             ),
-            const SizedBox(width: 10),
+            SizedBox(width: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('Tariku B...'),
+                children: [
+                  Text('Tariku Birhan'),
                   Text(
                     'Online',
                     style: TextStyle(
@@ -83,11 +83,11 @@ class TelegramBody extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.call),
+            icon: Icon(Icons.call),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               Icons.more_vert,
             ),
           ),

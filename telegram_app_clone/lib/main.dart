@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:telegram_app_clone/Model/telegram.dart';
 
 import 'Model/telegramProvider.dart';
 import 'Screen/editng_screen.dart';
@@ -19,6 +20,15 @@ class TelegramHome extends StatelessWidget {
       providers: [
         ChangeNotifierProvider.value(
           value: TelegramProvider(),
+        ),
+        ChangeNotifierProvider.value(
+          value: TelegramModel(
+            date: '',
+            description: '',
+            id: '',
+            imageName: '',
+            name: '',
+          ),
         ),
       ],
       child: MaterialApp(

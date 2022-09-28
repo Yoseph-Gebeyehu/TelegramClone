@@ -42,11 +42,11 @@ class TelegramDrawer extends StatelessWidget {
                     const Text(
                       'Jossy',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 15,
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(height: 5),
+                    // const SizedBox(height: 1),
                     Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +54,7 @@ class TelegramDrawer extends StatelessWidget {
                           const Text(
                             '+251918292773',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 13,
                               color: Colors.white54,
                             ),
                           ),
@@ -75,14 +75,14 @@ class TelegramDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.group),
+              icon: const Icon(Icons.group_outlined),
               onPressed: () {},
             ),
             title: const Text('New Group'),
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.person),
+              icon: const Icon(Icons.person_outline),
               onPressed: () {
                 // Navigator.of(context).pushNamed(TelegramGrid.routeName);
               },
@@ -91,7 +91,7 @@ class TelegramDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.call_sharp),
+              icon: const Icon(Icons.call_outlined),
               onPressed: () {},
             ),
             title: const Text('Calls'),
@@ -105,7 +105,7 @@ class TelegramDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.settings),
+              icon: const Icon(Icons.settings_outlined),
               onPressed: () {},
             ),
             title: const Text('Settings'),
@@ -115,14 +115,14 @@ class TelegramDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.add),
+              icon: const Icon(Icons.add_outlined),
               onPressed: () {},
             ),
             title: const Text('Add Friends'),
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.question_mark),
+              icon: const Icon(Icons.question_mark_outlined),
               onPressed: () {},
             ),
             title: const Text('Telegram Features'),

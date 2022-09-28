@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../Model/telegram.dart';
 import '../Model/telegramProvider.dart';
 import '../Screen/telegramBody.dart';
 
@@ -9,15 +10,16 @@ class TypesOfGroups extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final people = Provider.of<TelegramProvider>(context).userList;
+    final peopleModel = Provider.of<TelegramModel>(context);
     return ListView.builder(
       itemBuilder: ((context, index) => Column(
             children: [
               ListTile(
                 minVerticalPadding: 0,
                 onTap: () {
-                  if(people[index].name == 'Tariku Birhan'){
-                    Navigator.of(context).pushNamed(TelegramBody.routeName);
-                  } 
+                  Navigator.of(context).pushNamed(
+                    TelegramBody.routeName,
+                  );
                 },
                 contentPadding: const EdgeInsets.only(
                     left: 10, top: 0, right: 0, bottom: 0),
