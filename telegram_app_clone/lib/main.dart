@@ -28,6 +28,7 @@ class TelegramHome extends StatelessWidget {
             id: '',
             imageName: '',
             name: '',
+            lastSeen: '',
           ),
         ),
       ],

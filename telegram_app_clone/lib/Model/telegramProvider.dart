@@ -9,24 +9,27 @@ class TelegramProvider with ChangeNotifier {
       name: 'Tariku Birhan',
       imageName: 'Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg',
       description: 'Hello baba!! How you doing?? I\'ll call you soon!',
-      date: DateFormat.yMMMd().format(DateTime.now()),
+      date: DateFormat.MMMd().format(DateTime.now()),
       id: '1',
+      lastSeen: 'last seen recently'
     ),
     TelegramModel(
       name: 'Kalkidan Nigussie',
       imageName: 'Assets/Images/freestocks-8a95EVm0ovQ-unsplash.jpg',
       description:
           'Are u okey Kalichu?? I\'ll come you soon and see you honey!',
-      date: DateFormat.yMMMd().format(DateTime.now()),
+      date: DateFormat.MMMd().format(DateTime.now()),
       id: '2',
+      lastSeen: 'last seen at 11:4 pm'
     ),
     TelegramModel(
       name: 'Yoseph Alamrew',
       imageName: 'Assets/Images/milad-shams-FttBXHp7VZw-unsplash.jpg',
       description:
           'The project get secceded! Thank you for your support jossy!',
-      date: DateFormat.yMMMd().format(DateTime.now()),
+      date: DateFormat.MMMd().format(DateTime.now()),
       id: '3',
+      lastSeen: 'last seen with in a month'
     ),
   ];
   List<TelegramModel> get userList {

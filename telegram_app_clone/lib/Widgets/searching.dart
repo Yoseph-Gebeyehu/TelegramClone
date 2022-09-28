@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telegram_app_clone/Screen/telegramBody.dart';
 import '../Model/telegramProvider.dart';
 
 class Search extends SearchDelegate<String> {
@@ -22,7 +23,7 @@ class Search extends SearchDelegate<String> {
 
   @override
   Widget buildLeading(BuildContext context) {
-   return IconButton(
+    return IconButton(
       onPressed: () {
         close(context, '');
       },
@@ -83,8 +84,10 @@ class Search extends SearchDelegate<String> {
         final queryText = suggestions[i].name.substring(0, query.length);
         final remainingText = suggestions[i].name.substring(query.length);
         return ListTile(
-          onTap: () {},
-          subtitle: Text(suggestions[i].description),
+          onTap: () {
+            Navigator.of(context).pushNamed(TelegramBody.routeName);
+          },
+          subtitle: Text(suggestions[i].lastSeen),
           title: RichText(
             text: TextSpan(
               text: queryText,

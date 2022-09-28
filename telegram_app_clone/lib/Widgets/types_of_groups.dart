@@ -25,14 +25,23 @@ class TypesOfGroups extends StatelessWidget {
                     left: 10, top: 0, right: 0, bottom: 0),
                 title: Text(
                   people[index].name,
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 18),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 leading: CircleAvatar(
                   radius: 30,
                   backgroundImage: ExactAssetImage(people[index].imageName),
                 ),
-                subtitle: Text(people[index].description),
-                trailing: Text(people[index].date),
+                subtitle: Text(
+                  people[index].description,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                trailing: Padding(
+                  child: Text(people[index].date),
+                  padding: EdgeInsets.only(right: 10),
+                ),
               ),
               Divider(
                 color: Colors.black38,
