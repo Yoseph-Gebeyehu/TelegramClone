@@ -84,6 +84,7 @@ class Search extends SearchDelegate<String> {
         final queryText = suggestions[i].name.substring(0, query.length);
         final remainingText = suggestions[i].name.substring(query.length);
         return ListTile(
+          contentPadding:const EdgeInsets.all(0),
           onTap: () {
             Navigator.of(context).pushNamed(TelegramBody.routeName);
           },
@@ -99,8 +100,9 @@ class Search extends SearchDelegate<String> {
                 TextSpan(
                   text: remainingText,
                   style: const TextStyle(
-                    fontSize: 17,
-                    color: Colors.grey,
+                    fontSize: 15,
+                    // fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),
                 ),
               ],

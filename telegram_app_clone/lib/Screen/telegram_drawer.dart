@@ -9,13 +9,13 @@ class TelegramDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 224,
+            height: 150,
             color: Colors.blue,
             child: SizedBox(
               width: double.infinity,
               child: Container(
                 padding: const EdgeInsets.symmetric(
-                  vertical: 50,
+                  vertical: 20,
                   horizontal: 20,
                 ),
                 child: Column(
@@ -98,7 +98,7 @@ class TelegramDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.save_outlined),
+              icon: const Icon(Icons.bookmark_border),
               onPressed: () {},
             ),
             title: const Text('Saved Messages'),
@@ -115,7 +115,7 @@ class TelegramDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: IconButton(
-              icon: const Icon(Icons.add_outlined),
+              icon: const Icon(Icons.person_add_alt_1_outlined),
               onPressed: () {},
             ),
             title: const Text('Add Friends'),

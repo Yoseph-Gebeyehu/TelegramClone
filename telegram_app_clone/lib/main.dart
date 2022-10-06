@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:provider/provider.dart';
 import 'package:telegram_app_clone/Model/telegram.dart';
 
@@ -42,7 +43,7 @@ class TelegramHome extends StatelessWidget {
         home: const TelegramMain(),
         routes: {
           TelegramBody.routeName: (context) => TelegramBody(),
-          EditingScreen.routeName: (context) => EditingScreen()
+          EditingScreen.routeName: (context) => const EditingScreen()
         },
       ),
     );

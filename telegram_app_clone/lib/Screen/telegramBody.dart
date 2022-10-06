@@ -18,7 +18,6 @@ class TelegramBody extends StatelessWidget {
         )
         .toList;
     return Scaffold(
-      
       bottomNavigationBar: GridTileBar(
         backgroundColor: Colors.white,
         leading: IconButton(
@@ -63,11 +62,11 @@ class TelegramBody extends StatelessWidget {
               backgroundImage: ExactAssetImage(
                   'Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg'),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text('Tariku Birhan'),
                   Text(
                     'Online',
@@ -84,11 +83,11 @@ class TelegramBody extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.call),
+            icon: const Icon(Icons.call),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.more_vert,
             ),
           ),
