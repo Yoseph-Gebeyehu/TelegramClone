@@ -27,7 +27,7 @@ class Search extends SearchDelegate<String> {
       onPressed: () {
         close(context, '');
       },
-      icon: Icon(Icons.arrow_back),
+      icon:const Icon(Icons.arrow_back),
     );
   }
 
@@ -49,12 +49,12 @@ class Search extends SearchDelegate<String> {
               text: queryText,
               style: TextStyle(
                 fontSize: 17,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
               children: [
                 TextSpan(
                   text: remainingText,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 17,
                     color: Colors.grey,
                   ),
@@ -94,7 +94,7 @@ class Search extends SearchDelegate<String> {
               text: queryText,
               style: TextStyle(
                 fontSize: 17,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
               children: [
                 TextSpan(

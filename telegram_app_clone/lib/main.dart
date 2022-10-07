@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:provider/provider.dart';
 import 'package:telegram_app_clone/Model/telegram.dart';
+import 'package:telegram_app_clone/Screen/add_a_friend.dart';
 
 import 'Model/telegramProvider.dart';
 import 'Screen/editng_screen.dart';
@@ -43,7 +43,8 @@ class TelegramHome extends StatelessWidget {
         home: const TelegramMain(),
         routes: {
           TelegramBody.routeName: (context) => TelegramBody(),
-          EditingScreen.routeName: (context) => const EditingScreen()
+          EditingScreen.routeName: (context) => const EditingScreen(),
+          AddFriendScreen.routeName: (context) => const AddFriendScreen(),
         },
       ),
     );

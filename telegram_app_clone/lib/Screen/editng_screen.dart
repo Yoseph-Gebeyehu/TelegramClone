@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telegram_app_clone/Screen/add_a_friend.dart';
 
 class EditingScreen extends StatelessWidget {
   const EditingScreen({Key? key}) : super(key: key);
@@ -90,7 +91,9 @@ class EditingScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed(AddFriendScreen.routeName);
+        },
         child: const Icon(Icons.person_add),
       ),
     );
