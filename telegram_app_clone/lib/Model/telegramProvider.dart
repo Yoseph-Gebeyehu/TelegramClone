@@ -45,7 +45,7 @@ class TelegramProvider with ChangeNotifier {
           'Samricho my sis. Are you ok!',
       date: DateFormat.MMMd().format(DateTime.now()),
       id: '5',
-      lastSeen: 'last seen with in a month',
+      lastSeen: 'last seen with in a year',
     ),
     TelegramModel(
       name: 'Fkr Baslael',
@@ -53,7 +53,7 @@ class TelegramProvider with ChangeNotifier {
       description:
           'Samricho my sis. Are you ok!',
       date: DateFormat.MMMd().format(DateTime.now()),
-      id: '5',
+      id: '6',
       lastSeen: 'last seen with in a month',
     ),
   ];
