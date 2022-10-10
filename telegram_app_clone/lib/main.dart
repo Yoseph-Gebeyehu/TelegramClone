@@ -44,7 +44,7 @@ class TelegramHome extends StatelessWidget {
         routes: {
           TelegramBody.routeName: (context) => TelegramBody(),
           EditingScreen.routeName: (context) => const EditingScreen(),
-          AddFriendScreen.routeName: (context) => const AddFriendScreen(),
+          AddFriendScreen.routeName: (context) =>  AddFriendScreen(),
         },
       ),
     );

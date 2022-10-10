@@ -41,8 +41,7 @@ class TelegramProvider with ChangeNotifier {
     TelegramModel(
       name: 'Samrawit Getachew',
       imageName: 'Assets/Images/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg',
-      description:
-          'Samricho my sis. Are you ok!',
+      description: 'Samricho my sis. Are you ok!',
       date: DateFormat.MMMd().format(DateTime.now()),
       id: '5',
       lastSeen: 'last seen with in a year',
@@ -50,8 +49,7 @@ class TelegramProvider with ChangeNotifier {
     TelegramModel(
       name: 'Fkr Baslael',
       imageName: 'Assets/Images/taylor-hernandez-DLKR_x3T_7s-unsplash.jpg',
-      description:
-          'Samricho my sis. Are you ok!',
+      description: 'Samricho my sis. Are you ok!',
       date: DateFormat.MMMd().format(DateTime.now()),
       id: '6',
       lastSeen: 'last seen with in a month',
@@ -63,5 +61,18 @@ class TelegramProvider with ChangeNotifier {
 
   TelegramModel findById(String id) {
     return _userList.firstWhere((people) => people.id == id);
+  }
+
+   addFriend(String tgName, String phoneNo) {
+    final add = TelegramModel(
+      name: tgName,
+      imageName: 'imageName',
+      description: 'description',
+      date: DateTime.now().toString(),
+      id: 'id',
+      lastSeen: 'lastSeen',
+    );
+    return _userList.add(add);
+    notifyListeners();
   }
 }
