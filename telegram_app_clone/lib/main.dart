@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:telegram_app_clone/Model/telegram.dart';
 import 'package:telegram_app_clone/Screen/add_a_friend.dart';
+import 'package:telegram_app_clone/Screen/auth_screen.dart';
 
 import 'Model/telegramProvider.dart';
 import 'Screen/editng_screen.dart';
@@ -40,11 +41,12 @@ class TelegramHome extends StatelessWidget {
               bodyMedium: TextStyle(fontSize: 12),
             ),
             iconTheme: const IconThemeData(size: 23)),
-        home: const TelegramMain(),
+        home: const AuthenticationScreen(),
         routes: {
           TelegramBody.routeName: (context) => TelegramBody(),
           EditingScreen.routeName: (context) => const EditingScreen(),
-          AddFriendScreen.routeName: (context) =>  AddFriendScreen(),
+          AddFriendScreen.routeName: (context) => AddFriendScreen(),
+          TelegramMain.routeName: (context) => TelegramMain(),
         },
       ),
     );

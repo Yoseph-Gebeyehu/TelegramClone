@@ -9,7 +9,7 @@ import 'telegram_drawer.dart';
 
 class TelegramMain extends StatefulWidget {
   const TelegramMain({Key? key}) : super(key: key);
-
+  static const routeName = '/telegram-main';
   @override
   State<TelegramMain> createState() => _TelegramMainState();
 }
