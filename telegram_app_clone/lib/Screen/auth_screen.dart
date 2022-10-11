@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:telegram_app_clone/Screen/telegram_main.dart';
+
+import '../Model/auth_provider.dart';
 
 enum AuthMode { Signup, Login }
 
 class AuthenticationScreen extends StatefulWidget {
-  const AuthenticationScreen({Key? key}) : super(key: key);
+  // const AuthenticationScreen({Key? key}) : super(key: key);
   static const routeName = '/authentication-screen';
   @override
   State<AuthenticationScreen> createState() => _AuthenticationScreenState();
@@ -13,7 +17,7 @@ class AuthenticationScreen extends StatefulWidget {
 class _AuthenticationScreenState extends State<AuthenticationScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   AuthMode _authMode = AuthMode.Login;
-  final Map<String, String> _authData = {
+  Map<String, String> _authData = {
     'email': '',
     'password': '',
   };
@@ -21,7 +25,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
   final _passwordController = TextEditingController();
   final _emailController = TextEditingController();
 
-  void _submit() {
+  Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) {
       return;
     }
@@ -30,7 +34,12 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
       _isLoading = true;
     });
     if (_authMode == AuthMode.Login) {
-    } else {}
+    } else {
+      await Provider.of<AuthProvider>(context, listen: false).signUp(
+        _authData['email']!,
+        _authData['password']!,
+      );
+    }
     setState(() {
       _isLoading = false;
     });
@@ -83,12 +92,12 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                   child: Column(
                     children: <Widget>[
                       TextFormField(
-                        decoration: const InputDecoration(labelText: 'Email'),
+                        decoration: const InputDecoration(labelText: 'E-mail'),
                         keyboardType: TextInputType.emailAddress,
                         controller: _emailController,
                         validator: (value) {
-                          if (value!.isEmpty || !value.contains('@')) {
-                            return 'Invalid email';
+                          if (value!.isEmpty || !value.contains('@gmail.com')) {
+                            return 'Invalid email!';
                           }
                           return null;
                         },
@@ -131,12 +140,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                         const CircularProgressIndicator()
                       else
                         ElevatedButton(
-                          onPressed: () =>
-                              _passwordController.text == '12345678' &&
-                                      _emailController.text == 'jossy@gmail.com'
-                                  ? Navigator.of(context)
-                                      .pushNamed(TelegramMain.routeName)
-                                  : null,
+                          onPressed: _submit,
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),

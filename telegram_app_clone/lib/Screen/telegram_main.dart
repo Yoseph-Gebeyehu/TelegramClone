@@ -8,7 +8,7 @@ import 'editng_screen.dart';
 import 'telegram_drawer.dart';
 
 class TelegramMain extends StatefulWidget {
-  const TelegramMain({Key? key}) : super(key: key);
+  // const TelegramMain({Key? key}) : super(key: key);
   static const routeName = '/telegram-main';
   @override
   State<TelegramMain> createState() => _TelegramMainState();
@@ -25,7 +25,7 @@ class _TelegramMainState extends State<TelegramMain> {
         drawer: Drawer(
           elevation: 10,
           width: MediaQuery.of(context).size.width * 0.75,
-          child: const TelegramDrawer(),
+          child:  TelegramDrawer(),
         ),
         body: NestedScrollView(
           headerSliverBuilder: ((context, innerBoxIsScrolled) => [

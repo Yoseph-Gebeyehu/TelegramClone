@@ -94,7 +94,7 @@ class _AddFriendScreenState extends State<AddFriendScreen> {
                 showDialog(
                     context: context,
                     builder: (_) {
-                      return const CountryName();
+                      return  CountryName();
                     });
               },
               child: const Padding(

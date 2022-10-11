@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:telegram_app_clone/Screen/add_a_friend.dart';
 
 class EditingScreen extends StatelessWidget {
-  const EditingScreen({Key? key}) : super(key: key);
+  // const EditingScreen({Key? key}) : super(key: key);
   static const routeName = '/editing-screen';
   @override
   Widget build(BuildContext context) {

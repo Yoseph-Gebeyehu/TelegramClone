@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CountryName extends StatelessWidget {
-  const CountryName({Key? key}) : super(key: key);
+  // const CountryName({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
