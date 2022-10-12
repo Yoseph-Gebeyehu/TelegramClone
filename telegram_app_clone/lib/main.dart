@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:telegram_app_clone/Model/auth_provider.dart';
+import 'package:telegram_app_clone/Provider/auth_provider.dart';
 import 'package:telegram_app_clone/Model/telegram.dart';
 import 'package:telegram_app_clone/Screen/add_a_friend.dart';
 import 'package:telegram_app_clone/Screen/auth_screen.dart';
 
-import 'Model/telegramProvider.dart';
+import 'Provider/telegramProvider.dart';
 import 'Screen/editng_screen.dart';
 import 'Screen/telegramBody.dart';
 import 'Screen/telegram_main.dart';

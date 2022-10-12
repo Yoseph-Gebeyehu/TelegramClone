@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telegram_app_clone/Screen/telegramBody.dart';
-import '../Model/telegramProvider.dart';
+import '../Provider/telegramProvider.dart';
 
 class Search extends SearchDelegate<String> {
   final TelegramProvider tgProvider;

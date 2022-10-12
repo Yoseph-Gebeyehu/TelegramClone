@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:telegram_app_clone/Model/http_exeception.dart';
 
 class AuthProvider with ChangeNotifier {
   late String _token;
@@ -11,15 +12,20 @@ class AuthProvider with ChangeNotifier {
       String email, String password, String urlSegment) async {
     final url =
         'https://identitytoolkit.googleapis.com/v1/$urlSegment?key=AIzaSyAQwHwSbnpdDQ_ZlI38T7nQLsGi_EieX7s';
-    final response = await http.post(
-      url,
-      body: json.encode({
-        'email': email,
-        'password': password,
-        'returnSecureToken': true,
-      }),
-    );
-    print(json.decode(response.body));
+    try {
+      final response = await http.post(url,
+          body: json.encode({
+            'email': email,
+            'password': password,
+            'returnSecureToken': true,
+          }));
+      final responseData = json.decode(response.body);
+      if (responseData['error'] != null) {
+        throw HttpExeception(responseData['error']['message']);
+      }
+    } catch (error) {
+      throw error;
+    }
   }
 
   Future<void> signUp(String email, String password) async {

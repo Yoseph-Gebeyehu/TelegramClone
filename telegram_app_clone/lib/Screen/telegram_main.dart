@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../Model/telegramProvider.dart';
+import '../Provider/telegramProvider.dart';
 import '../Widgets/searching.dart';
 import '../Widgets/types_of_groups.dart';
 import 'editng_screen.dart';

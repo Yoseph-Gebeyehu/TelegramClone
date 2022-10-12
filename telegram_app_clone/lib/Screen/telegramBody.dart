@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_complete_guide/Telegram/Models/telegram_data.dart';
 import 'package:provider/provider.dart';
 
-import '../Model/telegramProvider.dart';
+import '../Provider/telegramProvider.dart';
 
 class TelegramBody extends StatelessWidget {
   static const routeName = '/telegram-body';

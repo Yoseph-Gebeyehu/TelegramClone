@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telegram_app_clone/Model/telegram.dart';
-import 'package:telegram_app_clone/Model/telegramProvider.dart';
+import 'package:telegram_app_clone/Provider/telegramProvider.dart';
 import 'package:telegram_app_clone/Widgets/country_name.dart';
 import 'package:provider/provider.dart';
 

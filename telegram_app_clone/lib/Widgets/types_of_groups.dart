@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../Model/telegram.dart';
-import '../Model/telegramProvider.dart';
+import '../Provider/telegramProvider.dart';
 import '../Screen/telegramBody.dart';
 
 class TypesOfGroups extends StatelessWidget {
