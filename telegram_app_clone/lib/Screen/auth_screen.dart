@@ -34,6 +34,10 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
       _isLoading = true;
     });
     if (_authMode == AuthMode.Login) {
+      await Provider.of<AuthProvider>(context, listen: false).login(
+        _authData['email']!,
+        _authData['password']!,
+      );
     } else {
       await Provider.of<AuthProvider>(context, listen: false).signUp(
         _authData['email']!,
