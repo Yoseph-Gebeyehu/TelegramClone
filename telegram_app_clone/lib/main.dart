@@ -11,7 +11,7 @@ import 'Screen/telegramBody.dart';
 import 'Screen/telegram_main.dart';
 
 void main() {
-  runApp( TelegramHome());
+  runApp(TelegramHome());
 }
 
 class TelegramHome extends StatelessWidget {
@@ -38,20 +38,22 @@ class TelegramHome extends StatelessWidget {
           ),
         ),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            textTheme: const TextTheme(
-              bodyMedium: TextStyle(fontSize: 12),
-            ),
-            iconTheme: const IconThemeData(size: 23)),
-        home:  AuthenticationScreen(),
-        routes: {
-          TelegramBody.routeName: (context) => TelegramBody(),
-          EditingScreen.routeName: (context) =>  EditingScreen(),
-          AddFriendScreen.routeName: (context) => AddFriendScreen(),
-          TelegramMain.routeName: (context) => TelegramMain(),
-        },
+      child: Consumer<AuthProvider>(
+        builder: (context, auth, _) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+              textTheme: const TextTheme(
+                bodyMedium: TextStyle(fontSize: 12),
+              ),
+              iconTheme: const IconThemeData(size: 23)),
+          home: auth.isAuth ? TelegramMain() : AuthenticationScreen(),
+          routes: {
+            TelegramBody.routeName: (context) => TelegramBody(),
+            EditingScreen.routeName: (context) => EditingScreen(),
+            AddFriendScreen.routeName: (context) => AddFriendScreen(),
+            TelegramMain.routeName: (context) => TelegramMain(),
+          },
+        ),
       ),
     );
   }

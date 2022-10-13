@@ -77,7 +77,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
       }
       _showErrorDialog(errorMessage);
     } catch (error) {
-      var errorMessage = 'Could authenticate you. Please try again later!';
+      var errorMessage = 'Could not authenticate you. Please try again later!';
       _showErrorDialog(errorMessage);
     }
     setState(() {

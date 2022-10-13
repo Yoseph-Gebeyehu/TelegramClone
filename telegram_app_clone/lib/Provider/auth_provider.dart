@@ -4,9 +4,22 @@ import 'package:http/http.dart' as http;
 import 'package:telegram_app_clone/Model/http_exeception.dart';
 
 class AuthProvider with ChangeNotifier {
-  late String _token;
-  late DateTime _expiryDate;
-  late String _userId;
+  var _token;
+  var  _expiryDate;
+  var _userId;
+
+  bool get isAuth {
+    return token != null;
+  }
+
+  String? get token {
+    if (_token != null &&
+        _expiryDate.isAfter(DateTime.now()) &&
+        _expiryDate != null) {
+      return _token;
+    }
+    return null;
+  }
 
   Future<void> _authenticate(
       String email, String password, String urlSegment) async {
@@ -23,6 +36,14 @@ class AuthProvider with ChangeNotifier {
       if (responseData['error'] != null) {
         throw HttpExeception(responseData['error']['message']);
       }
+      _token = responseData['idToken'];
+      _userId = responseData['localId'];
+      _expiryDate = DateTime.now().add(
+        Duration(
+          seconds: int.parse(responseData['expiresIn']),
+        ),
+      );
+      notifyListeners();
     } catch (error) {
       throw error;
     }
