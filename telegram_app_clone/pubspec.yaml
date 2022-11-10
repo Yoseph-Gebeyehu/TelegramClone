@@ -36,7 +36,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  shared_preferences: ^2.0.15
+  # shared_preferences: ^2.0.15
+  # http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
@@ -66,14 +67,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - Assets/Images/albert-dera-ILip77SbmOE-unsplash.jpg 
-   - Assets/Images/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg 
-   - Assets/Images/freestocks-8a95EVm0ovQ-unsplash.jpg 
-   - Assets/Images/michael-dam-mEZ3PoFGs_k-unsplash.jpg 
-   - Assets/Images/milad-shams-FttBXHp7VZw-unsplash.jpg 
-   - Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg 
-   - Assets/Images/rowan-kyle-m663zRzRe40-unsplash.jpg
-   - Assets/Images/taylor-hernandez-DLKR_x3T_7s-unsplash.jpg
+   - Assets/Images/photo_2022-11-09_17-06-07.jpg 
+   - Assets/Images/photo_2022-11-09_17-06-25.jpg
+   - Assets/Images/photo_2022-11-09_17-06-30.jpg 
+   - Assets/Images/photo_2022-11-09_17-06-34.jpg 
+   - Assets/Images/photo_2022-11-09_17-06-37.jpg 
+   - Assets/Images/photo_2022-11-09_17-06-40.jpg
+   - Assets/Images/photo_2022-11-09_17-06-43.jpg
+  #  - Assets/Images/taylor-hernandez-DLKR_x3T_7s-unsplash.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
