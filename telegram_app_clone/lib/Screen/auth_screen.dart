@@ -30,14 +30,14 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text('An error ocured!'),
+        title: const Text('An error ocured!'),
         content: Text(message),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Okey'),
+            child:const Text('Okey'),
           ),
         ],
       ),

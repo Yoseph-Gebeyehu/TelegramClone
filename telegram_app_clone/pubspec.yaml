@@ -88,18 +88,24 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Anton
+      fonts:
+        - asset: Assets/Fonts/Anton-Regular.ttf
+    - family: Lato
+      fonts:
+        - asset: Assets/Fonts/Lato-Bold.ttf
+        - asset: Assets/Fonts/Lato-Regular.ttf
     - family: OpenSans
       fonts:
         - asset: Assets/Fonts/OpenSans-Bold.ttf
         - asset: Assets/Fonts/OpenSans-Regular.ttf
-          weight: 700
     - family: QuickSand
       fonts:
         - asset: Assets/Fonts/Quicksand-Bold.ttf
         - asset: Assets/Fonts/Quicksand-Light.ttf
         - asset: Assets/Fonts/Quicksand-Medium.ttf
         - asset: Assets/Fonts/Quicksand-Regular.ttf
-          weight: 700
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

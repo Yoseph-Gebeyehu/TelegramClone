@@ -11,6 +11,7 @@ class TypesOfGroups extends StatelessWidget {
     final people = Provider.of<TelegramProvider>(context).userList;
     final peopleModel = Provider.of<TelegramModel>(context);
     return ListView.builder(
+      
       itemBuilder: ((context, index) => Column(
             children: [
               ListTile(
@@ -24,7 +25,7 @@ class TypesOfGroups extends StatelessWidget {
                     left: 0, top: 0, right: 0, bottom: 0),
                 title: Text(
                   people[index].name,
-                  style: const TextStyle(fontSize: 18),
+                  style: const TextStyle(fontSize: 18,fontFamily: 'QuickSand'),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
