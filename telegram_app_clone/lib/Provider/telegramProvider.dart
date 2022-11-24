@@ -8,14 +8,14 @@ class TelegramProvider with ChangeNotifier {
   final List<TelegramModel> _userList = [
     TelegramModel(
         name: 'Tariku Birhan',
-        imageName: 'Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg',
+        imageName: 'Assets/Images/photo_2022-11-09_17-06-07.jpg',
         description: 'Hello baba!! How you doing?? I\'ll call you soon!',
         date: DateFormat.MMMd().format(DateTime.now()),
         id: '1',
         lastSeen: 'last seen recently'),
     TelegramModel(
         name: 'Kalkidan Nigussie',
-        imageName: 'Assets/Images/freestocks-8a95EVm0ovQ-unsplash.jpg',
+        imageName: 'Assets/Images/photo_2022-11-09_17-06-25.jpg',
         description:
             'Are u okey Kalichu?? I\'ll come you soon and see you honey!',
         date: DateFormat.MMMd().format(DateTime.now()),
@@ -23,7 +23,7 @@ class TelegramProvider with ChangeNotifier {
         lastSeen: 'last seen at 11:4 pm'),
     TelegramModel(
         name: 'Yoseph Alamrew',
-        imageName: 'Assets/Images/milad-shams-FttBXHp7VZw-unsplash.jpg',
+        imageName: 'Assets/Images/photo_2022-11-09_17-06-30.jpg',
         description:
             'The project get secceded! Thank you for your support jossy!',
         date: DateFormat.MMMd().format(DateTime.now()),
@@ -31,7 +31,7 @@ class TelegramProvider with ChangeNotifier {
         lastSeen: 'last seen with in a month'),
     TelegramModel(
       name: 'Hana Getu',
-      imageName: 'Assets/Images/rowan-kyle-m663zRzRe40-unsplash.jpg',
+      imageName: 'Assets/Images/photo_2022-11-09_17-06-34.jpg',
       description:
           'Hello hani!Congradulation we saw your resume and we accept your application.',
       date: DateFormat.MMMd().format(DateTime.now()),
@@ -40,7 +40,7 @@ class TelegramProvider with ChangeNotifier {
     ),
     TelegramModel(
       name: 'Samrawit Getachew',
-      imageName: 'Assets/Images/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg',
+      imageName: 'Assets/Images/photo_2022-11-09_17-06-37.jpg',
       description: 'Samricho my sis. Are you ok!',
       date: DateFormat.MMMd().format(DateTime.now()),
       id: '5',
@@ -48,7 +48,7 @@ class TelegramProvider with ChangeNotifier {
     ),
     TelegramModel(
       name: 'Fkr Baslael',
-      imageName: 'Assets/Images/taylor-hernandez-DLKR_x3T_7s-unsplash.jpg',
+      imageName: 'Assets/Images/photo_2022-11-09_17-06-40.jpg',
       description: 'Samricho my sis. Are you ok!',
       date: DateFormat.MMMd().format(DateTime.now()),
       id: '6',

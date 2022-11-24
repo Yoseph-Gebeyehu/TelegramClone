@@ -60,7 +60,7 @@ class TelegramBody extends StatelessWidget {
             const CircleAvatar(
               radius: 20,
               backgroundImage: ExactAssetImage(
-                  'Assets/Images/roksolana-zasiadko-LyeduBb2Auk-unsplash.jpg'),
+                  'Assets/Images/photo_2022-11-09_17-06-43.jpg'),
             ),
             const SizedBox(width: 10),
             Expanded(
